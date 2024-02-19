@@ -17,7 +17,12 @@
     top: 0;
   }
   footer {
-    background-color: #922c2c;
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
     height: $footer-height;
   }
   .home_page_body {
