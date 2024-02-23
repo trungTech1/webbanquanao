@@ -10,7 +10,7 @@ import {
   AiOutlineShoppingCart,
   AiOutlineUser,
 } from "react-icons/ai";
-const Header = () => {
+const Header = ({ modal, showSignup }) => {
   const [isShowAuthen, setIsShowAuthen] = useState(false);
   const [wishlistItems, setWishlistItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
@@ -25,6 +25,13 @@ const Header = () => {
 
   const toggleWishlist = () => {
     setIsWishlistContentVisible(!isWishlistContentVisible);
+  };
+
+  const loginClick = () => {
+    modal(true);
+  };
+  const signupClick = () => {
+    showSignup(true);
   };
   return (
     <header>
@@ -58,9 +65,6 @@ const Header = () => {
             </li>
             <li>
               <Link to={""}>Best</Link>
-            </li>
-            <li>
-              <Link to={""}>Tết gieo lộc 30%</Link>
             </li>
           </ul>
         </div>
@@ -176,8 +180,12 @@ const Header = () => {
                 {isShowAuthen && (
                   <ul className={isShowAuthen ? "" : "hiden"}>
                     <li className="authen">
-                      <button className="signIn">Đăng nhập</button>
-                      <button className="register">Đăng ký</button>
+                      <button className="signIn" onClick={loginClick}>
+                        Đăng nhập
+                      </button>
+                      <button className="register" onClick={signupClick}>
+                        Đăng ký
+                      </button>
                     </li>
                     <li>
                       <Link to={""}>Theo dõi đơn hàng</Link>

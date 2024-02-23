@@ -11,8 +11,10 @@
     background-color: white;
     padding: 10px 50px;
     height: $header-height;
-    position: sticky;
-    z-index: 998;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 2000;
     box-shadow: 0px 4px 4px rgba(199, 199, 199, 0.25);
     top: 0;
   }
@@ -25,7 +27,7 @@
     color: #000;
     height: $footer-height;
   }
-  .home_page_body {
-    min-height: calc(100vh - #{$header-height} - #{$footer-height});
-  }
+  // .home_page_body {
+  //   min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  // }
 }
